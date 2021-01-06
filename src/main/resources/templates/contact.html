@@ -1,0 +1,59 @@
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Restaurant Website!</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/cover/">
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css">
+    <link href="../static/cover.css" rel="stylesheet">
+</head>
+
+<body class="text-center" >
+
+<div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+        <div class="inner" style="width:60%;margin:auto">
+            <nav class="nav nav-masthead justify-content-center">
+                <a class="nav-link" href="#" th:href="@{'/'}">Strona Główna</a>
+                <a class="nav-link" href="#" th:href="@{'/rateShow'}">Opinie</a>
+                <a class="nav-link active" href="#" th:href="@{'/contact'}">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main" class="inner cover">
+        <h3 class="cover-heading" style="margin-bottom: 10%">Poniżej nasze dane kontaktowe:</h3>
+        <div class="listOpinions">
+        <ul>
+            <li><h4>Restauracja "Design Thinking"</h4></li>
+            <ul>
+                <li>ul. Piękna 4</li>
+                <li>43-400 Bielsko-Biała</li>
+                <li>tel. kontakt 600 600 600</li>
+                <li>mail: jakumamy@mail.com</li>
+            </ul>
+        </ul>
+        </div>
+    </main>
+
+    <footer class="mastfoot mt-auto">
+        <div class="inner">
+            <p>@2020 WSB</p>
+        </div>
+    </footer>
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="../../assets/js/vendor/popper.min.js"></script>
+<script src="../../dist/js/bootstrap.min.js"></script>
+</body>
+</html>

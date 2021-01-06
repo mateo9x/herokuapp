@@ -1,0 +1,78 @@
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Restaurant Website!</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/cover/">
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css">
+    <link href="../static/cover.css" rel="stylesheet">
+</head>
+
+<body class="text-center" id="show">
+
+<div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto" style="margin-bottom:10% !important;">
+        <div class="inner">
+            <h3 class="masthead-brand">Design Thinking</h3>
+            <nav class="nav nav-masthead justify-content-center">
+                <a class="nav-link" href="#" th:href="@{'/'}">Strona Główna</a>
+                <a class="nav-link active" href="#" th:href="@{'/rateShow'}">Opinie</a>
+                <a class="nav-link" href="#" th:href="@{'/contact'}">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main" class="inner cover">
+    <h3 class="cover-heading">Opinie od naszych gości:</h3>
+
+<div class="listOpinions">
+        <table th:each="opinion : ${opinion}">
+        <tr><td>Imię:</td>
+        <td th:text="${opinion.name}">1</td>
+        </tr>
+            <tr><td>Numer paragonu:</td>
+        <td th:text="${opinion.receipeNumber}">1</td>
+            </tr>
+            <tr><td>Kod pocztowy:</td>
+        <td th:text="${opinion.postalCode}">1</td>
+            </tr>
+            <tr><td>Email:</td>
+        <td th:text="${opinion.email}">1</td>
+            </tr>
+            <tr><td>Opinia:</td>
+                <td th:text="${opinion.comment}">1</td>
+            </tr>
+            <tr><td>Dodano:</td>
+        <td th:text="${opinion.addedTime}">1</td><hr>
+            </tr>
+
+        </table>
+</div>
+        <p class="lead" style="margin-top:5%">
+            <a href="#" class="btn btn-lg btn-secondary" th:href="@{'/rateUs'}">Wystaw opinię</a>
+        </p>
+</main>
+
+<footer class="mastfoot mt-auto">
+    <div class="inner">
+        <p>@2020 WSB</p>
+    </div>
+</footer>
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="../../assets/js/vendor/popper.min.js"></script>
+<script src="../../dist/js/bootstrap.min.js"></script>
+</body>
+</html>
