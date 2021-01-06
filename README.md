@@ -1,4 +1,4 @@
-# designthinking
+# Heroku First Deploy
 
 ## 0. At the beginning:
 This is very simple app, without any big features, made for friend for school project, but I could by the way first time deploy app on Heroku Server.
